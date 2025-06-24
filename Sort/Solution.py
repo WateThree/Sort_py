@@ -42,6 +42,9 @@ class Solution:
         if left >= right:
             return left 
         
+        # 随机选择一个基准元素,放到left
+        self.swap(arr, left, random.randint(left, right))
+
         pivot = arr[left]
         hole = left
 
@@ -218,5 +221,6 @@ class Solution:
         # 将排序后的结果复制回原数组
         for i in range(n):
             arr[i] = output[i]  
+        return
 
         
